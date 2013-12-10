@@ -1,0 +1,100 @@
+<% if @error %>
+
+<div class="container">
+
+  <div class="starter-template">
+    <h1 class="fucking-result-head">Yo, Bitch!</h1>
+    <p class="better-result-head"><%= @error %></p>
+		<%= image_tag "jesse#{[1,2,3,4].sample}.png" %></a>
+		<a href="<%= root_url %>" class="new-search-submit">Try Again, Bitch</a>
+  </div>
+
+</div>
+	
+<% else %>
+
+<div class="container">
+
+  <div class="starter-template">
+    <h1 class="fucking-result-head"><%= @success_response %></h1>
+    <p class="better-result-head">Floor: <%= @floor.floor_number %> Section: <%= @section.call_num %></p>
+		<%= image_tag "#{@floor.id}.png" %>
+		<a href="<%= root_url %>" class="new-search-submit">Another Fucking Search</a>
+  </div>
+
+</div>
+
+<% end %>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46259651-1', 'bobstar.org');
+  ga('send', 'pageview');
+
+</script>
+
+<style>
+
+body {
+	background: #333;
+}
+
+.fucking-result-head {
+	font-family: 'Lato';
+	font-weight: bold;
+	text-align: center;
+	color: #47008C;
+	text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
+	font-size: 50px;
+}
+
+.book-search-result {
+	text-align: center;
+	margin: 20px auto 0 auto;
+	font-family: 'Lato';
+	color: #47008C;
+	text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
+	font-size: 30px;
+}
+
+.better-result-head {
+	font-size: 26px;
+	color: #eee;
+	font-family: 'Lato';
+}
+
+.link-home {
+	text-align: center;
+}
+
+.new-search-submit {
+	text-alignment: center;
+	clear: both;
+	text-decoration: none;
+	padding: 5px 30px;
+	font-size: 18px;
+	background: #47008C;
+	color: #eee;
+	border: 2px solid #eee;
+	border-radius: 3px;
+	font-family: 'Lato';
+	font-weight: bold;
+}
+
+.new-search-submit:hover {
+	text-decoration: none;
+	color: #47008C;
+	background: #eee;
+	border-color: #47008C;
+}
+
+.starter-template > img {
+	display: block;
+	width: 50%;
+	margin: 15px auto;
+}
+</style>
