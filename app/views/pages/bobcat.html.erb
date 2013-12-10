@@ -2,7 +2,8 @@
 
   <div class="starter-template">
     <h1 class="fucking-result-head">Bobcat</h1>
-    <p class="better-result-head">Have fun...</p>
+    <p class="lead">Have fun...</p>
+    <p class="lead"><a target="blank" href="http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?dscnt=1&dstmp=1386629790042&vid=NYU&fromLogin=true&fromLogin=true">(Go to Actual Site)</a></p>
 		<iframe src="http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?dscnt=1&dstmp=1386629790042&vid=NYU&fromLogin=true&fromLogin=true"></iframe>
   </div>
 
@@ -24,12 +25,25 @@ body {
 	font-size: 50px;
 }
 
-.better-result-head {
-	font-size: 26px;
+.lead {
+	font-size: 150%;
 	color: #eee;
 	font-family: 'Lato';
+	margin-bottom: 5px;
 }
 
+.lead > a {
+	font-size: 20px;
+	color: #eee;
+	font-family: 'Lato';
+	text-decoration: none;
+	padding: 5px;
+}
+
+.lead > a:hover {
+	color: #47008C;
+	background: #eee;
+}
 
 .starter-template > iframe {
 	display: block;
