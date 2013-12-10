@@ -17,9 +17,9 @@
 
   <div class="starter-template">
     <h1 class="fucking-result-head"><%= @success_response %></h1>
-    <p class="better-result-head">Floor: <%= @floor.floor_number %> Section: <%= @section.call_num %></p>
+    <p class="lead">Floor: <%= @floor.floor_number %> Section: <%= @section.call_num %></p>
 		<%= image_tag "#{@floor.id}.png" %>
-		<a href="<%= root_url %>" class="new-search-submit">Another Fucking Search</a>
+		<a href="<%= root_url %>" class="new-search-submit">New Search</a>
   </div>
 
 </div>
@@ -38,22 +38,6 @@ body {
 	text-align: center;
 	color: #47008C;
 	text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
-	font-size: 50em;
-}
-
-.book-search-result {
-	text-align: center;
-	margin: 20px auto 0 auto;
-	font-family: 'Lato';
-	color: #47008C;
-	text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
-	font-size: 30px;
-}
-
-.better-result-head {
-	font-size: 26px;
-	color: #eee;
-	font-family: 'Lato';
 }
 
 .link-home {
@@ -64,7 +48,7 @@ body {
 	text-alignment: center;
 	clear: both;
 	text-decoration: none;
-	padding: 5px 30px;
+	padding: 5px 10px;
 	font-size: 18px;
 	background: #47008C;
 	color: #eee;
@@ -87,5 +71,11 @@ body {
 	margin: 15px auto;
 	border: 5px solid #eee;
 	border-radius: 5px;
+}
+
+.lead {
+	font-size: 150%;
+	color: #eee;
+	font-family: 'Lato';
 }
 </style>
