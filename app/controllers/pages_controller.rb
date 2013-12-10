@@ -7,4 +7,7 @@ class PagesController < ApplicationController
   
   def go_exams
   end
+  
+  def bobcat
+  end
 end

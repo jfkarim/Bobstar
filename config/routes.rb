@@ -7,6 +7,7 @@ Bobstar::Application.routes.draw do
     collection do
       get 'map'
       get 'go_exams'
+      get 'bobcat'
     end
   end
   
