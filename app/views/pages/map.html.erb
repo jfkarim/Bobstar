@@ -1,0 +1,114 @@
+<div class="container">
+
+  <div class="starter-template">
+    <h1 class="fucking-result-head">Here's Your Fucking Map</h1>
+    <ul class="floor-bar group">
+			<li><a class="scroll" href="#LL2">LL2</a></li>
+			<li><a class="scroll" href="#LL1">LL1</a></li>
+			<li><a class="scroll" href="#first">1</a></li>
+			<li><a class="scroll" href="#Mezz">Mezz</a></li>
+			<li><a class="scroll" href="#second">2</a></li>
+			<li><a class="scroll" href="#third">3</a></li>
+			<li><a class="scroll" href="#fourth">4</a></li>
+			<li><a class="scroll" href="#fifth">5</a></li>
+			<li><a class="scroll" href="#sixth">6</a></li>
+			<li><a class="scroll" href="#seventh">7</a></li>
+			<li><a class="scroll" href="#eigth">8</a></li>
+			<li><a class="scroll" href="#ninth">9</a></li>
+			<li><a class="scroll" href="#tenth">10</a></li>
+		</ul>
+		
+    <ul class="floor-show group">
+			<li id="LL2"><h3 class="floor-head">LL2</h3><%= image_tag "LL2.png" %></li>
+			<li id="LL1"><h3 class="floor-head">LL1</h3><%= image_tag "LL1.png" %></li>
+			<li id="first"><h3 class="floor-head">1</h3><%= image_tag "1.png" %></li>
+			<li id="Mezz"><h3 class="floor-head">Mezz</h3><%= image_tag "mezz.png" %></li>
+			<li id="second"><h3 class="floor-head">2</h3><%= image_tag "2.png" %></li>
+			<li id="third"><h3 class="floor-head">3</h3><%= image_tag "3.png" %></li>
+			<li id="fourth"><h3 class="floor-head">4</h3><%= image_tag "4.png" %></li>
+			<li id="fifth"><h3 class="floor-head">5</h3><%= image_tag "5.png" %></li>
+			<li id="sixth"><h3 class="floor-head">6</h3><%= image_tag "6.png" %></li>
+			<li id="seventh"><h3 class="floor-head">7</h3><%= image_tag "7.png" %></li>
+			<li id="eighth"><h3 class="floor-head">8</h3><%= image_tag "8.png" %></li>
+			<li id="ninth"><h3 class="floor-head">9</h3><%= image_tag "9.png" %></li>
+			<li id="tenth"><h3 class="floor-head">10</h3><%= image_tag "10.png" %></li>
+		</ul>
+  </div>
+
+</div>
+
+
+<style>
+
+body {
+	background: #333;
+}
+
+.fucking-result-head {
+	font-family: 'Lato';
+	font-weight: bold;
+	text-align: center;
+	color: #47008C;
+	text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
+	font-size: 50px;
+}
+
+.floor-bar {
+	margin: 50px auto;
+	padding-left: 0;
+	width: 80%;
+	font-size: 26px;
+	color: #eee;
+	font-family: 'Lato';
+	list-style-type: none;
+}
+
+.floor-bar > li {
+	display: inline;
+	margin: 5px 10px;
+}
+
+.floor-bar > li > a {
+	color: #eee;
+}
+
+.floor-bar > li > a:hover {
+	color: #47008C;
+	text-decoration: none;
+}
+
+.floor-show {
+	margin: 10px auto;
+	padding-left: 0;
+	width: 80%;
+	list-style-type: none;
+}
+
+.floor-head {
+	font-family: 'Lato';
+	font-weight: bold;
+	text-align: center;
+	color: #47008C;
+	text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
+	font-size: 35px;
+}
+
+.floor-show > li > img {
+	display: block;
+	width: 60%;
+	margin: 15px auto;
+}
+</style>
+
+<script>
+$(document).ready(function() {
+	$("a.scroll").on("click", function(event) {
+		event.preventDefault();
+		console.log("HERE");
+		console.log($(this).attr("href"));
+		$('html, body').animate({
+			scrollTop: $($(this).attr("href")).offset().top - 55
+		}, 400);
+	})
+})
+</script>

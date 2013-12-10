@@ -1,0 +1,72 @@
+
+<div class="container">
+
+  <div class="starter-template">
+    <h1 class="fucking-bobst">Where's My Fucking Book, Bobst!</h1>
+		<form action="<%= floors_url %>" method="GET">
+	    <p class="lead">Enter first one or two letters of call number</p>
+		  <input class="book-search-bar" type="text" name="search_call" maxlength="3"><br>
+			<input type="submit" value="Search" class="search-submit">
+		</form>
+  </div>
+
+</div>
+
+<style>
+
+body {
+	background: #333;
+}
+
+.fucking-bobst {
+	font-family: 'Lato';
+	font-weight: bold;
+	text-align: center;
+	color: #47008C;
+	text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
+	font-size: 50px;
+}
+
+.book-search {
+	text-align: center;
+	margin: 20px auto;
+	font-family: 'Lato';
+}
+
+.book-search > form > p {
+	color: #eee;
+	font-size: 18px;
+}
+
+.book-search-bar {
+	text-align: center;
+	width: 115px;
+	font-size: 30px;
+	padding: 5px;
+	color: #eee;
+	background: #47008C;
+	border: 2px solid #eee;
+	border-radius: 3px;
+}
+
+.search-submit {
+	margin-top: 10px;
+	padding: 5px 25px;
+	font-size: 18px;
+	color: #eee;
+	background: #47008C;
+	border: 2px solid #eee;
+	border-radius: 3px;
+}
+
+.search-submit:hover {
+	background: #eee;
+	color: #47008C;
+	border-color: #47008C;
+}
+
+.lead {
+	color: #eee;
+	font-family: 'Lato';
+}
+</style>
